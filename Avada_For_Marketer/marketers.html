@@ -1,0 +1,1134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Avada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" integrity="sha512-ZuRTqfQ3jNAKvJskDAU/hxbX1w25g41bANOVd1Co6GahIe2XjM6uVZ9dh0Nt3KFCOA061amfF2VeL60aJXdwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   
+<style>
+	/* Custom style */
+    .accordion-button::after {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+      transform: scale(.7) !important;
+    }
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    }
+
+ body { 
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+
+ }
+ .navbar-brand {
+    
+    font-size: 2rem;
+    font-family: 'Lobster Two', sans-serif;
+    color: black
+    
+ }
+.navbar-brand:hover {
+   color: black;
+}
+.nav-link {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    
+}
+.nav-link:hover {
+    color: black;
+
+}
+.search {
+    height: 40px;
+    width: 80%;
+    border-radius: 60px;
+    outline: none;
+    margin-right: -35px;
+    font-family: 'Rubik', sans-serif;
+    border: 2px solid rgb(248, 26, 92);
+
+
+}
+.btn0 {
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background-color: rgb(248, 26, 92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+
+
+}
+.main {
+    background-image: url("images/bg1.jpg");
+    background-size: cover; 
+    height: 100vh; 
+    background-position: 50% 50%; 
+    width: 100%;
+}
+.main h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    
+}
+.btn1 {
+    height: 45px; 
+    width: 155px; 
+    border: none;
+    outline: none; 
+    background-color: rgb(248, 26, 92); 
+    color: white; 
+    font-weight: 700; 
+    border-radius: 60px;
+}
+
+.btn1:hover{
+    background-color: rgb(218, 131, 149)  ;
+    transition: 0.5s;
+}
+.btn3 {
+    height: 35px; 
+    width: 105px; 
+    border: none;
+    outline: none; 
+    background-color: rgb(33, 223, 33); 
+    color: white; 
+    font-weight: 700; 
+    
+}
+
+.btn3:hover{
+    background-color: rgb(221, 90, 8)  ;
+    transition: 0.5s;
+}
+h1{
+    font-weight: 700;
+}
+.best:hover{
+    box-shadow: -1px -1px 26px 5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px -1px 26px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px -1px 26px 5px rgba(0,0,0,0.75);
+}
+
+.best1 {
+    
+    background-color: whitesmoke;
+    height: 60vh;
+    width: 100%;
+    border-radius: 8px;
+
+}
+.best2 {
+    background-color:  whitesmoke;
+    height: 60vh;
+    width: 100%;
+    border-radius: 8px;
+
+
+}
+.best3 {
+    background-color:  whitesmoke;
+    height: 60vh;
+    width: 100%;
+    border-radius: 8px;
+
+
+}
+
+.news {
+    
+   background-color: black;
+   color: white;
+
+}
+.btn2{
+    height: 45px;
+    width: 100px;
+    background-color: white;
+    margin-left: -10px;
+    border: 2px solid white;
+    font-weight: 600;
+
+
+}
+.news input{
+    height: 45px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.news::placeholder{
+    color: white;
+
+
+}
+.news p{
+    margin: 0;
+}
+
+
+ </style>
+</head>
+  <body> 
+
+
+   
+   <!-- nav1-->
+
+   <nav class="navbar bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span><img src="./images/Screenshot 2024-01-17 201045.png" height="40" alt="logo" /></span>
+        <span class="text-white text-blod ">envato <span class="text-success">market</span>
+      </a>
+      <form class="d-flex position-absolute top-2 end-0">
+        
+        <button class="btn btn-success me-2" type="submit">Buy Now</button>
+       </form>
+      
+     
+    </div>
+  </nav>
+<hr><br><br><br> 
+  <!--nav2-->
+
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container ">
+      <a class="navbar-brand " href="#">
+        <span class="ms-5 pb-4"><img src="./images/avada-logo-svg.svg" height="40" alt="logo"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  " id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px;">
+         
+            <div class="dropdown ">
+                <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Avada
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                            
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a longer.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                         
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                         
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a .</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                         
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text"> This content.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This content </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> This content .</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                             
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> This content is a.</p>
+                              </div>
+                            </div>
+                          </div><div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">T This con</p>
+                              </div>
+                            </div>
+                          </div><div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> This content </p>
+                              </div>
+                            </div>
+                          </div><div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> This content.</p>
+                              </div>
+                            </div>
+                          </div><div class="col">
+                            <div class="card">
+                              
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card with supporting</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="card">
+                             
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a longer card</p>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+
+
+                  </button></li>
+                  
+                </ul>
+              </div>
+          </li>
+          <li > 
+            <div class="dropdown">
+            <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Avada For
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">
+
+                <div class="card w-100 mb-3 "style="background-color: rgb(255, 233, 121);">
+                  <a href="../Avada_for_Beginners/beginners.html" style="text-decoration: none;">
+                  <div class="row card-body text-warning text-center text-blod">
+                    <div class="col-lg-8">
+                       <h2 class="card-title ">Beginners</h2>
+                      <p class="card-text">Create your won site ease.</p></div>
+                      <div class="col-lg-4"> <img src="./images/Screenshot 2024-02-01 173844.png" class="w-100" alt="..."></div>
+                    </div></a> 
+                  </div>
+                  <div class="card w-100 mb-3 " style="background-color: rgb(183, 245, 152);">
+                    <a href="marketers.html" style="text-decoration: none;">
+                    <div class="row card-body  text-success text-center text-blod">
+                      <div class="col-lg-8">
+                      <h2 class="card-title">Marketers</h2>
+                      <p class="card-text">grow your business fast.</p></div>
+                      <div class="col-lg-4"> <img src="./images/Screenshot 2024-02-01 173615.png" class="w-100" alt="..."></div>
+                    </div></a>
+                  </div>
+                  <div class="card w-100 mb-3 " style="background-color:  rgb(126, 213, 240)">
+                    <a href="../Avada_for_Professionals/professionals.html" style="text-decoration: none;">
+                    <div class=" row card-body text-center text-blod">
+                     <div class="col-lg-8"><h2 class="card-title">Professionals</h2>
+                      <p class="card-text">Optimize Your project workflow.</p></div> 
+                      <div class="col-lg-4"> <img src="./images/Screenshot 2024-02-01 173219.png" class="w-100" alt="..."></div>
+                    </div></a>
+                  </div>
+               
+
+              </button></li>
+             
+            </ul>
+          </div>
+          </li> 
+          
+          <div class="d-flex align-items-center justify-content-center">
+            <li >
+                <a class="nav-link" href="../Hosting/hosting.html">Hosting</a>
+          </li>
+          <li class="nav-item">
+            
+            <a class="nav-link active" aria-current="page" href="../Costomization/coustomization.html"><span>Coustomization</span></a>
+          </li>
+          <li > 
+            <div class="dropdown">
+            <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resources
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button"><h5><i class="bi bi-question-circle-fill"></i> Help Center</h5></button></li>
+              <li><button class="dropdown-item" type="button"><h5><i class="bi bi-play-circle-fill"></i> Video Tutorials</h5></button></li>
+              <li><button class="dropdown-item" type="button"><h5><i class="bi bi-facebook"></i> Community</h5></button></li>
+              <li><button class="dropdown-item" type="button"><h5><i class="bi bi-bootstrap-fill"></i> Blog</h5></button></li>
+              <button class="dropdown-item btn  btn-outline-success " type="submit "><h4> Please Questions <i class="bi bi-arrow-right"></i></h4> </button>
+            </ul>
+          </div>
+          </li> 
+        </ul>
+   
+        <form class="" >
+          
+          <button class="btn btn-outline-dark" type="submit"><i class="bi bi-stars"></i> <a href="../Login_Reg/login.html" class="text-success" style="text-decoration: none;"> My Avada</a></button>
+        </form>
+      </div>
+    </div>
+  </nav><br>
+
+    <!--------------------------1st for marketers-------------------->
+    <div class="card mb-12 " >
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="./images/Screenshot 2024-01-20 213202.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-6 " style="background-color: rgb(183, 245, 152);">
+            <div class="card-body">
+              <br>
+              <br><br>&nbsp;&nbsp;&nbsp;&nbsp;<strong><p class="  text-blod">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Avada Is For Marketers</p></strong>
+              <br><h1>&nbsp;&nbsp;&nbsp;Generate Leads<br>&nbsp;&nbsp;&nbsp;& Conversions</h1>
+              <h5 class="card-title"></h5>
+              <hp class="card-text text-center text-blod py-5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design & build branded websites, including targeted content layouts, that perfectly align with &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your inbound marketing strategies.</p>
+              
+              <div class="con ms-5 ">
+                <form class="d-flex " >
+              
+                    <button class="btn btn-dark mt-5" type="submit" style="font-size: 30px;"> Buy Avada For $69 <i class="bi bi-arrow-right"></i></button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!---------------------------icon----------------------->
+
+<section class="card3 mt-3">
+    <div class="container">
+        <div class="row"> 
+           
+            <div class="row">
+                <div class="col-lg-4 ">
+                    
+                    <section class="c mt-3 ">
+                        <div class="container text-dark ">
+                          <div class="row py-5 ">
+                               
+                                  
+                            <i class="bi bi-grid-1x2-fill d-flex justify-content-center fs-1"></i>
+                                   
+                                   
+                              
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                            <h4>Design Freedom</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" > Avada is 100% fluid & responsive across all device types, from mobile to desktop & tablets, with no compromise.
+                            <br><br><a href="" class="text-dark text-blod " ><strong>Take Control Over Design</strong></a>
+                           </p>
+                          </div>
+                         
+                        </div>
+                </div> 
+                <div class="col-lg-4 ">
+                    <section class="c mt-3 ">
+                        <div class="container text-dark  ">
+                         
+                           <div class="row py-5">
+                              
+                                   
+                            <i class="bi bi-graph-down-arrow d-flex justify-content-center fs-1"></i>
+                                   
+                                  
+                              
+                           </div>
+                           <div class="p d-flex justify-content-center ">
+                            <h4>Create Any Website, Fast!</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" > Build unique pages & post layouts for your website by harnessing the power of Avada’s dynamic content functionality.
+                            <br><br><a href="" class="text-dark text-blod " ><strong>Built Coustom Website</strong></a>
+                           </p>
+                          </div>
+                          
+                        </div>
+                </div>
+                <div class="col-lg-4 ">
+                 
+                    <div class="c mt-3 ">
+                        <div class="container text-dark ">
+                          
+                            <div class="row py-5 ">
+                               
+                                
+                                <i class="bi bi-gift-fill d-flex justify-content-center fs-1"></i>
+                                 
+                             
+                          
+                          </div>
+                        <div class="p d-flex justify-content-center ">
+                          <h4>Launch Website That Sell</h4>
+                        </div>
+                        <div class="p d-flex justify-content-center ">
+                         <p class=" text-center" >Avada is integrated with WooCommerce, allowing you to build successful online stores to sell anything online.<br>
+                            <br> <a href="" class="text-dark text-blod " ><strong>Grow Your Business</strong></a>
+                         </p>
+                         
+                        </div></div></div></div></div></div></div></section>
+                        
+<!-------------------------------Design freedom------------>
+<div class="pa " style="background-color: rgb(183, 245, 152);"> 
+               
+  <div class="section d-flex justify-content-center mt-5">
+    <h1> Design Freedom</h1>
+    
+  </div>
+  <div class="section d-flex justify-content-center">
+   <p class="text-center fs-5">You have total control over the creative process to elevate the website’s <br>brand message above the competition.</p>
+    
+  </div>
+                        
+                                <div class="section">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-1">
+                                            
+                                                </div>
+                                                <div class="col-lg-10 w-90 ">
+                                                  <img src="./images/build-fast-live-visual-builder-1200x833.webp" class="card-img" alt="...">
+                                                </div>
+                                              
+                                            </div>
+                                            
+                                        </div>
+
+                                
+
+ </div> 
+
+ <div class="section d-flex justify-content-center mt-5">
+    <h1> Intuitive Visual Drag & Drop Website Builder</h1>
+    
+  </div>
+  <div class="section d-flex justify-content-center">
+   <p class="text-center fs-5">Avada’s visual workflow & layout options will give you the confidence to manage your<br> website’s content on the fly.</p>
+    
+  </div>
+
+  <section class="card3 mt-3">
+    <div class="container">
+        <div class="row"> 
+           
+            <div class="row">
+                <div class="col-lg-6">
+                    
+                    <section class="c mt-3 ">
+                        <div class="container text-dark ">
+                          <div class="row py-5 ">
+                               
+                                  
+                            <img src="./images/complete-creative-design-freedom-600x427.webp"  alt="logo">
+                                   
+                                   
+                              
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                            <h4>120+ Design & Layout Elements</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" > Tools that make it possible for you to convey your brands’ message accurately & no coding knowledge is required.
+                            
+                           </p>
+                          </div>
+                         
+                        </div>
+                </div> 
+                <div class="col-lg-6 ">
+                    <section class="c mt-3 ">
+                        <div class="container text-dark  ">
+                         
+                           <div class="row py-5">
+                              
+                                   
+                            <img src="./images/design-anything-build-everything-600x473.webp"  alt="logo">
+                                   
+                                  
+                              
+                           </div>
+                           <div class="p d-flex justify-content-center ">
+                            <h4>Design Anything & Build Everything</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" > Align your website with your inbound marketing strategy & turn potential customers into repeat customers.
+                           
+                           </p>
+                          </div>
+                          
+                        </div>
+                </div>
+                </div></div></div></div></section>
+
+<!---------------------Create any website Fast------------->
+
+
+<div class="section d-flex justify-content-center mt-5">
+    <h1> Create Any Website, Fast!</h1>
+    
+  </div>
+  <div class="section d-flex justify-content-center">
+   <p class="text-center fs-5">Prebuilt websites & content, options to build the layouts you want, extensive help resources & world-class <br>support will guarantee an efficient workflow to save you time.</p>
+    
+  </div>
+
+  <section class="card3 ">
+    <div class="container">
+        <div class="row"> 
+           
+            <div class="row">
+                <div class="col-lg-4 ">
+                    
+                    <section class="c mt-3 ">
+                        <div class="container text-dark ">
+                          <div class="row py-5 ">
+                               
+                                  
+                           <img src="./images/launch-2@2x-400x245.jpg" height="220" alt="logo">
+                                   
+                                   
+                              
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                            <h4 class="text-center">Prebuilt Websites & Content</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" > Prebuilt resources are designed to save you time, providing your workflow with an extensive library of style & design choices.</p>
+                          </div>
+                         
+                        </div>
+                </div> 
+                <div class="col-lg-4 ">
+                    <section class="c mt-3 ">
+                        <div class="container text-dark  ">
+                         
+                           <div class="row py-5">
+                              
+                                   
+                                    <img src="./images/no-coding-3-400x245.jpg" height="220" alt="logo">
+                                   
+                                  
+                              
+                           </div>
+                           <div class="p d-flex justify-content-center ">
+                            <h4 class="text-center">No Coding Knowledge Required</h4>
+                          </div>
+                          <div class="p d-flex justify-content-center ">
+                           <p class=" text-center" >Years of evolution guarantee that Avada’s website building tools are intuitive, with an extensive range of options.</p>
+                          </div>
+                          
+                        </div>
+                </div>
+                <div class="col-lg-4 ">
+                 
+                    <div class="c mt-3 ">
+                        <div class="container text-dark ">
+                          
+                            <div class="row py-5">
+                               
+                                
+                                <img src="./images/support-8-400x287.jpg" height="220" alt="logo">
+                                 
+                             
+                          
+                          </div>
+                        <div class="p d-flex justify-content-center ">
+                          <h4 class="text-center">World-Class Support</h4>
+                        </div>
+                        <div class="p d-flex justify-content-center ">
+                         <p class=" text-center" > Our team focuses on building long-term professional relationships with our customers that you can rely on & trust.</p>
+                        </div>
+               
+            
+    </div></section><br><hr>
+
+ <!---------------Lounch website-------->
+
+ <div class="section d-flex justify-content-center mt-5">
+    <h1> Launch Websites That Sell</h1>
+    
+  </div>
+  <div class="section d-flex justify-content-center">
+   <p class="text-center fs-5">WooCommerce is perfectly integrated with Avada, ensuring continual compatibility as online <br>business requirements & trends evolve. Setting up an eCommerce store could not be any easier.</p>
+    
+  </div>
+  
+<div class=" col-lg-12  ms-5 mt-5">
+    <div class="row g-0">
+      <div class="col-lg-4 d-flex justify-content-center ms-1">
+        <div class="card-body"><br><br><br><br>
+            <br><br><br><br><h3 class="text-center"> Online Store Builder</h3><p class="text-center fs-5">Whether you are a beginner, marketer, or professional, Avada has the tools & resources you can rely on to succeed.
+                <br><br><a href="" class="text-dark fs-4">Built Your Store <i class="bi bi-arrow-right"></i></a>
+            </p>
+        </div><br>
+        
+        </div>
+      <div class="col-md-7 ">
+        <div class="card-body">
+          
+          <h5 class="card-title"></h5>
+         <img src="./images/Screenshot 2024-01-20 232206.png" class="w-100">
+         
+      </div>
+    </div></div></div>
+
+
+
+
+
+
+    <!---------------Lounch website-------->
+
+ 
+  
+<div class=" col-lg-12  ms-5 mt-5">
+    <div class="row g-0">
+     
+       
+      <div class="col-md-7 ">
+        <div class="card-body">
+          
+          <h5 class="card-title"></h5>
+         <img src="./images/Screenshot 2024-01-20 234650.png" class="w-100">
+         
+      </div>
+    </div>
+    <div class="col-lg-4 d-flex justify-content-center ms-1">
+        <div class="card-body"><br><br><br><br>
+            <br><br><br><br><h3 class="text-center"> Online Store Builder</h3><p class="text-center fs-5">Whether you are a beginner, marketer, or professional, Avada has the tools & resources you can rely on to succeed.
+                <br><br><a href="" class="text-dark fs-4">Grow Your Business <i class="bi bi-arrow-right"></i></a>
+            </p>
+        </div><br>
+        
+        </div>
+</div></div>
+
+
+   
+ <div class=" col-lg-12  ms-5 mt-5">
+     <div class="row g-0">
+       <div class="col-lg-4 d-flex justify-content-center ms-1">
+         <div class="card-body"><br><br><br><br>
+             <br><br><br><br><h3 class="text-center"> Online Store Builder</h3><p class="text-center fs-5">Whether you are a beginner, marketer, or professional, Avada has the tools & resources you can rely on to succeed.
+                 <br><br><a href="" class="text-dark fs-4">Built Website Forms <i class="bi bi-arrow-right"></i></a>
+             </p>
+         </div><br>
+         
+         </div>
+       <div class="col-md-7 ">
+         <div class="card-body">
+           
+           <h5 class="card-title"></h5>
+          <img src="./images/Screenshot 2024-01-20 234412.png" class="w-100">
+          
+       </div>
+     </div></div></div>
+
+     <!-----------------6card---------->
+     <section class="card3 mt-3">
+        <div class="container">
+            <div class="row"> 
+               
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        
+                        <section class="best1  ">
+                            <div class="container text-dark "><br>
+                                <div class="row py-5">
+                                  
+                                    <h4 class="text-center ">Plugin Integrations</h4>
+                                    <p class="text-center">Avada is compatible with popular WordPress plugins.</p>
+                                      
+                                    <img src="./images/Screenshot 2024-01-20 235704.png" height="220" alt="logo">
+                                   
+                                   
+                              
+                           </div>
+    
+                              
+                             
+                            </div>
+                    </div> 
+                    <div class="col-lg-4 ">
+                        <section class="best2">
+                            <div class="container text-dark  ">
+                              <br>
+                              <div class="row py-5">
+                                <h4 class="text-center ">Website Performance</h4>
+                                <p class="text-center">Avada includes optimization tools for improved performance.</p>
+                      
+                                       
+                                <img src="./images/Screenshot 2024-01-20 235733.png" height="220" alt="logo">
+                               
+                                
+                       </div>
+    
+                             
+                              
+                               
+                            </div>
+                    </div>
+                    <div class="col-lg-4 " >
+                     
+                        <div class="best3 ">
+                            <div class="container text-dark ">
+                              <br>  <div class="row py-4 ">
+                                   
+                                <h4 class="text-center ">Avada Motion Effects</h4>
+                                <p class="text-center">Create an interactive website, impress visitors and enhance user experience.</p>   
+                                <img src="./images/Screenshot 2024-01-20 235754.png" height="220" alt="logo">
+                           
+                          </div>
+    
+                              
+                              </div>
+                   
+                
+        </div>
+                
+                    </div></div></div></div></section>
+           
+    </section>
+    <section class="card3 mt-3">
+        <div class="container">
+            <div class="row"> 
+               
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        
+                        <section class="best1  ">
+                            <div class="container text-dark "><br>
+                                <div class="row py-5">
+                                  
+                                    <h4 class="text-center ">Mobile Friendly</h4>
+                                    <p class="text-center">100% responsive across all device types, from mobile to desktop.</p>
+                                    <img src="./images/mobile-friendly-9-400x259.jpg" height="220" alt="logo">
+                                   
+                                    
+                                    
+                              
+                           </div>
+    
+                              
+                             
+                            </div>
+                    </div> 
+                    <div class="col-lg-4 ">
+                        <section class="best2">
+                            <div class="container text-dark  ">
+                              <br>
+                              <div class="row py-5">
+                                  
+                                <h4 class="text-center ">SEO Friendly</h4>
+                                <p class="text-center">Avada is built & designed to follow strict HTML & SEO practices.</p>    
+                                <img src="./images/Screenshot 2024-01-20 235836.png" height="220" alt="logo">
+                               
+                               
+                          
+                       </div>
+    
+                             
+                              
+                               
+                            </div>
+                    </div>
+                    <div class="col-lg-4 " >
+                     
+                        <div class="best3 ">
+                            <div class="container text-dark ">
+                              <br>  <div class="row py-4 ">
+                                   
+                                <h4 class="text-center ">Multilangual Support</h4>
+                                <p class="text-center">Avada is 100% RTL & multilingual ready to build any international site.</p>  
+                                <img src="./images/Screenshot 2024-01-20 235905.png" height="220" alt="logo">
+                                
+                          </div>
+    
+                              
+                              </div>
+                   
+                
+        </div>
+                
+                    </div></div></div></div></section>
+           
+    </section>
+    <!--------------- Avada Studio-------------->
+<div  style="background-color:  rgb(235, 255, 225) ">
+    <div class="card col-lg-10  ms-5 mt-5"  style="background-color: rgb(235, 255, 225);  border: none;" >
+        <div class="row g-0">
+          <div class="col-md-5 d-flex justify-content-center">
+            <div class="card-body"><br><br><br><br>
+              <h1 class="" style="font-size: 60px;"> Avada Studio</h1><p>Whether you are a beginner, marketer, or professional, Avada has the tools & resources you can rely on to succeed.</p>
+              <br><div class="link"><a href="" class="text-dark"> <strong>Exploro Prebuilt Content <i class="bi bi-arrow-right"></i></strong> </a></div> 
+            </div><br>
+               
+            </div>
+          <div class="col-md-7 ">
+            <div class="card-body">
+              
+              <h5 class="card-title"></h5>
+             <img src="./images/Screenshot 2024-01-21 001710.png" class="w-100">
+             
+          </div>
+        </div></div></div></div></div></div>
+        
+<!----------------------7th---------------------->
+
+<div class="section d-flex justify-content-center">
+    <h1> Frequently Asked Questions</h1>
+    
+  </div><br>
+  <div class=" m-4"><div class=" col-lg-10 ms-5 ">
+    <div class="accordion" id="myAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne"><h3>What Is Included With My Purchase Of Avada?</h3></button>									
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="card-body">
+                    <p>With your purchase of Avada, you will receive:<br><br>
+  
+                      6 months of free professional support.<br>
+                      8 bundled premium plugins.<br>
+                      101 prebuilt websites, with new sites released regularly.<br>
+                      514 prebuilt content items for every occassion, downloadable with just a click.<br>
+                      120+ Design and Layout Elements.<br>
+                      550+ detailed help files, continually updated to ensure everything is current.<br>
+                      200+ video tutorials, with new videos, added regularly.<br>
+                      Free, consistent, and stable updates to ensure compatibility with industry standards & trends.<br>
+                      Avada works with popular 3rd party plugins like Yoast SEO, WooCommerce, The Events Calendar, HubSpot, WPML, and more. </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"><h3>Are There Any Recurring Fees?</h3></button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                <div class="card-body">
+                    <p>No, there are no recurring license fees to use Avada. It is a one-time purchase that provides you with lifetime updates at no extra cost and is valid for life. You can choose to purchase a support extension after the initial 6 months of support has expired. However, this is entirely optional.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"><h3>Where Can I Get Support?</h3></button>                     
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="card-body">
+                    <p>Hands-on support with our professional team of support experts is accessible 24/7, and that includes an extensive library of detailed documentation and video tutorials.<br><br>
+  
+                      To access support you will need to register a support account by following these steps.<br>
+                      Once your support account is set up, you can submit support tickets here.<br>
+                      Learn how to navigate your support account Dashboard here.<br>
+                      Check to see if you are eligible for Grandfathered support.<br>
+                      For a detailed overview of our support policy please go here.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+              <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"><h3>Are The Prebuilt Websites Fully Customizable?</h3></button>                     
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+              <div class="card-body">
+                  <p>Hands-on support with our professional team of support experts is accessible 24/7, and that includes an extensive library of detailed documentation and video tutorials.<br><br>
+  
+                    To access support you will need to register a support account by following these steps.<br>
+                    Once your support account is set up, you can submit support tickets here.<br>
+                    Learn how to navigate your support account Dashboard here.<br>
+                    Check to see if you are eligible for Grandfathered support.<br>
+                    For a detailed overview of our support policy please go here.</a></p>
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"><h3>Why Should I Trust Avada?</h3></button>                     
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+            <div class="card-body">
+                <p>Hands-on support with our professional team of support experts is accessible 24/7, and that includes an extensive library of detailed documentation and video tutorials.<br><br>
+  
+                  To access support you will need to register a support account by following these steps.<br>
+                  Once your support account is set up, you can submit support tickets here.<br>
+                  Learn how to navigate your support account Dashboard here.<br>
+                  Check to see if you are eligible for Grandfathered support.<br>
+                  For a detailed overview of our support policy please go here.</a></p>
+            </div>
+        </div>
+    </div>
+    </div></div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+    
+ 
+
+<!--------------last card-------------->
+<section class="last">
+  <div class="container">
+    <div class="s " style="position: absolute; ">
+      <div class="row mt-5 mb-5">
+        <div class="col-lg-1">
+
+        </div>
+        <div class="row  col-lg-9 " style="background-color: rgb(183, 245, 152);">
+          <div class="col-lg-5 mt-5 mb-5">
+            <h1 class="text-center"> Build Successful Websites With Avada</h1><p>Whether you are a beginner, marketer, or professional, Avada has the tools & resources you can rely on to succeed.</p>
+          </div>
+          <div class="col-lg-5 mt-5 mb-5">
+            <h5 class="card-title"></h5>
+               <img src="./images/footer-cta-600x369.webp" class="w-100">
+          </div>
+          <div class="col-lg-2">
+
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>  <br><br>  
+  
+   
+          <br><section class="news py-5 mt-2">
+            
+              <div class="container "><br><br><br><br>
+                  
+                  <div class="row mt-5 ">
+                      <div class="col-lg-12">
+                         <div class="row ">
+                           <div class="col-lg-2">
+                              <span class="pb-4 bg-white">
+                                <img src="./images/avada-logo-svg.svg" height="40" alt="logo"></span>
+                           </div>
+                           <div class="col-lg-3">
+                              <h5 class="pb-3">CUSTOMER CARE</h5>
+                              <p>Regular</p>
+                              <p>On Time</p>
+  
+                           </div>
+                           <div class="col-lg-2">
+                              <h5 class="pb-3">CUSTOMER CARE</h5>
+                              <p>Regular</p>
+                              <p>On Time</p>
+                              
+  
+                           </div>
+                           <div class="col-lg-5 ">
+                              <div class="row">
+                                  <div class="col-lg-9 m-auto text-center">
+                                      <p>Sign up to our newsletter and get all of the latest news and updates.</p>
+                                      <input type="text" class="p-3" placeholder="Enter Your Email">
+                                      <button class="btn2">Submit</button>
+                                  </div>
+                              </div>
+                             
+                         </div>
+                      </div>
+                  </div>
+              </div>
+          </section><br><hr>
+       <div class="footer">
+   <div class="col d-flex justify-content-end ">
+     
+          <span class="ms-3" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg></span>
+         <span class="ms-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+  </svg></span>
+       
+         <span class="ms-3"  ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+  </svg></span>
+         <span class="ms-3"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+  </svg></span>
+         <span class="ms-3" > <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+  <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+  </svg></span>
+          </div>
+  
+      </div>
+   </div>
+          
+     
+       </div>
+           
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+  </body>
+  </html>
